@@ -195,7 +195,7 @@ router.route({
 // POST to the rank of a user
 router.route({
   method: 'post',
-  path: '/group/:group/member/:target/rank',
+  path: '/api/group/:group/member/:target/rank',
   validate: {
     type: 'json',
     body: Joi.object({
