@@ -205,6 +205,7 @@ router.route({
     continueOnError: true
   },
   pre: async (ctx, next) => {
+    console.log('Received request:', ctx.request.body); // Log request body
     await authenticate(ctx, next)
     await nbxAuthenticate(ctx, next)
     return next()
@@ -223,6 +224,7 @@ router.route({
     })
   }
 })
+
 
 // POST to the rank of a user by providing a value to change it by
 router.route({
